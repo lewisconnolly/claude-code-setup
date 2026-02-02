@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Environment Setup Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2328;
+            background: #f6f8fa;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        #content {
+            background: #fff;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 32px 48px;
+        }
+
+        #content h1 {
+            font-size: 2em;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #d0d7de;
+        }
+
+        #content h2 {
+            font-size: 1.5em;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d0d7de;
+        }
+
+        #content h3 {
+            font-size: 1.25em;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        #content p {
+            margin-bottom: 16px;
+        }
+
+        #content a {
+            color: #0969da;
+            text-decoration: none;
+        }
+
+        #content a:hover {
+            text-decoration: underline;
+        }
+
+        #content ul, #content ol {
+            margin-bottom: 16px;
+            padding-left: 2em;
+        }
+
+        #content li {
+            margin-bottom: 4px;
+        }
+
+        #content code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 85%;
+            background: #eff1f3;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+        }
+
+        #content pre {
+            margin-bottom: 16px;
+            padding: 16px;
+            background: #161b22;
+            color: #e6edf3;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        #content pre code {
+            background: none;
+            padding: 0;
+            font-size: 85%;
+            color: inherit;
+        }
+
+        #content table {
+            width: 100%;
+            margin-bottom: 16px;
+            border-collapse: collapse;
+        }
+
+        #content th, #content td {
+            padding: 8px 16px;
+            border: 1px solid #d0d7de;
+            text-align: left;
+        }
+
+        #content th {
+            background: #f6f8fa;
+            font-weight: 600;
+        }
+
+        #content hr {
+            border: none;
+            border-top: 1px solid #d0d7de;
+            margin: 24px 0;
+        }
+
+        #content blockquote {
+            margin-bottom: 16px;
+            padding: 0 16px;
+            color: #59636e;
+            border-left: 4px solid #d0d7de;
+        }
+
+        #content strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="content">Loading...</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        fetch('claude-code-setup.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('content').innerHTML = marked.parse(text);
+            })
+            .catch(() => {
+                document.getElementById('content').textContent = 'Failed to load markdown file.';
+            });
+    </script>
+</body>
+</html>
