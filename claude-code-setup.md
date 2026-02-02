@@ -242,7 +242,7 @@ gh auth status
 
 ## 5. Integrating Claude Code and Git with Antigravity
 
-### Method 1: Running Claude Code Inside Antigravity's Terminal
+### Running Claude Code Inside Antigravity's Terminal
 
 Antigravity includes an integrated terminal (inherited from VS Code). You can run Claude Code directly within it:
 

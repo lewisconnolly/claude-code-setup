@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: developer environment setup guide\n\nAdd setup guide for Antigravity, Claude Code, Git, and GitHub CLI with an HTML viewer page.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh repo create:*)",
+      "Bash(npx @anthropic-ai/mcp-client@latest call-tool playwright browser_navigate --tool-input '{\"\"url\"\": \"\"https://github.com/lewisconnolly/claude-code-setup\"\"}')",
+      "Bash(start https://github.com/lewisconnolly/claude-code-setup)"
+    ]
+  }
+}
