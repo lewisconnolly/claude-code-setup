@@ -127,9 +127,12 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
+Check you have a PowerShell profile: $home\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+and if not, create it (file can be blank)
+
 **Windows (PowerShell)**
 ```powershell
-$env:PATH = "$home/.local/bin;$PATH" | Out-File -Append -FilePath $PROFILE
+$env:PATH = "$home\.local\bin;$env:PATH" | Out-File -Append -FilePath $PROFILE
 ```
 
 ---
