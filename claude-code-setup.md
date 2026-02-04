@@ -54,7 +54,6 @@ Claude Code is Anthropic's terminal-based AI coding assistant that understands y
 
 - **Subscription required:** Claude Pro, Claude Max, Claude for Teams/Enterprise, or an Anthropic Console account with billing enabled
 - **Operating Systems:** macOS 13.0+, or Windows 10+ (with WSL, WSL 2, or Git Bash)
-- **Node.js 18+** (only required for npm installation method)
 
 ### Native Installation (Recommended)
 
@@ -91,16 +90,6 @@ Note: Homebrew installations don't auto-update. Run `brew upgrade claude-code` p
 ```powershell
 winget install Anthropic.ClaudeCode
 ```
-
-### npm Installation (Alternative)
-
-If you prefer npm (requires Node.js 18+):
-
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-> ⚠️ **Important:** Never use `sudo npm install -g` — this causes permission and security issues.
 
 ### Verify Installation
 
@@ -242,17 +231,26 @@ gh auth status
 
 ## 5. Integrating Claude Code and Git with Antigravity
 
+### Install Claude Code Extension
+
+In your terminal:
+
+```bash
+antigravity --install-extension anthropic.claude-code
+```
+
 ### Running Claude Code Inside Antigravity's Terminal
 
 Antigravity includes an integrated terminal (inherited from VS Code). You can run Claude Code directly within it:
 
 1. **Open Antigravity** and navigate to your project
-2. **Open the terminal** with `` Ctrl+' ``
-3. **Launch Claude Code:**
+2. **Launch Claude Code via Extension** Click the Claude Code * icon on the left-hand sidebar of Antigravity
+3. **Alternatively: Launch Claude Code via Terminal** Open the terminal** with `` Ctrl+' ``
+4. **Launch Claude Code:**
    ```bash
    claude
    ```
-4. **Use both agents in parallel:**
+5. **Use both agents in parallel:**
    - Use Antigravity's Gemini agents for high-level planning (via the Agent panel, `Cmd/Ctrl+L`)
    - Use Claude Code in the terminal for precise code execution
    - This lets you leverage Gemini's planning capabilities and Claude's coding precision together
